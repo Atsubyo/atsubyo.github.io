@@ -1,0 +1,14 @@
+@import "./navbar.css";
+@import "./scrollbar.css";
+@import "./section.css";
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-size: 1.5rem;
+	font-family: system-ui;
+	line-height: 1.5;
+}
