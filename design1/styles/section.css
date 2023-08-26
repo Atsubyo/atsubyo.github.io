@@ -1,0 +1,56 @@
+section {
+	padding-block: 3rem;
+	height: 100vh;
+}
+
+section:nth-child(even) {
+	background: #fff;
+	color: #323232;
+}
+
+section:nth-child(odd) {
+	background: #000;
+	color: #efefef;
+}
+
+.wrapper {
+	width: min(100% - 3rem, 65ch);
+	margin-inline: auto;
+}
+
+.nav-return-top {
+	margin: 1rem;
+	padding: 0.5rem;
+	text-decoration: none;
+	border-radius: 25px;
+	font-size: 1rem;
+	font-weight: 650;
+	width: 10rem;
+	height: 2rem;
+	mix-blend-mode: difference;
+	display: none;
+}
+
+@media (width > 1180px) {
+	.nav-return-top {
+		display: none;
+		color: #000;
+	}
+}
+
+@media (width <= 1180px) {
+	.nav-return-top {
+		color: #000;
+		background: #fff;
+	}
+
+	.nav-return-top.active {
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		z-index: 3;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

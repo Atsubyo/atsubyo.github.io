@@ -1,0 +1,16 @@
+@import url("./menu.css");
+@import url("./circularLinks.css");
+
+:root {
+	--text-color-light: #435d86;
+	--background-color-light: rgb(113, 108, 132);
+
+	--text-color-dark: #c2d9ff;
+	--background-color-dark: rgb(113, 108, 132);
+}
+
+body {
+	color: var(--text-color-light);
+	margin: 0px;
+	overflow: hidden;
+}

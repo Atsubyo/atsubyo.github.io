@@ -1,0 +1,2 @@
+light mode text: #435d86
+dark mode text: #c2d9ff
