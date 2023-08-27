@@ -1,0 +1,91 @@
+@keyframes fadeInFromRight {
+	0% {
+		transform: translateX(10rem);
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes fadeInFromLeft {
+	0% {
+		transform: translateX(-20rem);
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes fadeInFromLeftViewing {
+	0% {
+		transform: translateX(-20rem);
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		transform: translateX(var(--viewing-position, 0));
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes fadeInFromTop {
+	0% {
+		transform: translateY(-10rem);
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes zoom {
+	0% {
+		background-size: 100px 100px;
+	}
+	100% {
+		background-size: 300000px 300000px;
+	}
+}
+
+@keyframes rotateCircleBorder {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spinCircle {
+	0% {
+		transform: rotate(var(--angle)) translateX(var(--radius))
+			rotate(calc(-1 * var(--angle)));
+	}
+	100% {
+		transform: rotate(calc(var(--angle) + 360deg))
+			translateX(var(--radius)) rotate(calc(-1 * var(--angle) - 360deg));
+	}
+}

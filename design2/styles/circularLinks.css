@@ -41,15 +41,6 @@
 	animation: rotateCircleBorder 20s linear infinite;
 }
 
-@keyframes rotateCircleBorder {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
 .link-item {
 	position: absolute;
 	--radius: 200px;
@@ -82,17 +73,6 @@
 
 #facebook-link {
 	--angle: 300deg;
-}
-
-@keyframes spinCircle {
-	0% {
-		transform: rotate(var(--angle)) translateX(var(--radius))
-			rotate(calc(-1 * var(--angle)));
-	}
-	100% {
-		transform: rotate(calc(var(--angle) + 360deg))
-			translateX(var(--radius)) rotate(calc(-1 * var(--angle) - 360deg));
-	}
 }
 
 @media (max-width: 1520px) or (max-height: 1120px) {

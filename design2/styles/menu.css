@@ -52,9 +52,8 @@
 	left: 0;
 	top: 0;
 	opacity: 0.3;
-	transition: opacity 800ms ease, background-size 800ms ease,
-		background-position 800ms ease, width 2s ease, background-image 2s ease,
-		background-color 1s ease;
+	transition: opacity 800ms ease, background-position 1.5s ease,
+		width 1.5s ease;
 	width: 15dvw;
 	z-index: 2;
 }
@@ -63,15 +62,18 @@
 	background-image: url("../images/background/purple-watercolor2.jpg");
 	background-position: center 40%;
 	background-size: auto 110vmax;
-	/* background-repeat: no-repeat; */
 	height: 100%;
-	left: 0px;
 	position: absolute;
-	top: 0px;
+	left: 0;
+	top: 0;
 	transition: opacity 800ms ease, background-size 800ms ease,
 		background-position 800ms ease;
 	width: 100%;
 	z-index: 0;
+}
+
+.zoom-background {
+	animation: zoom 2s ease-in forwards;
 }
 
 #menu-items:hover ~ #menu-background-pattern {
@@ -106,12 +108,10 @@
 	margin: 0;
 	font: inherit;
 	color: inherit;
-	/* cursor: pointer; */
 	outline: none;
 	user-select: none;
 	cursor: pointer;
 	display: block;
-	font-family: "Ibarra Real Nova", serif;
 	font-size: clamp(2rem, 4vw, 4rem);
 	padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
 	text-decoration: none;
@@ -134,24 +134,7 @@
 }
 
 .menu-item:nth-child(4) {
-	animation-delay: 0.4s;
-}
-
-.menu-item:nth-child(5) {
-	animation-delay: 0.75s;
-}
-
-@keyframes fadeInFromRight {
-	0% {
-		transform: translateX(100%);
-		opacity: 0;
-		visibility: hidden;
-	}
-	100% {
-		transform: translateX(0);
-		opacity: 1;
-		visibility: visible;
-	}
+	animation-delay: 0.6s;
 }
 
 .fadeIn-animation-complete {

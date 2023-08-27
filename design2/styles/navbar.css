@@ -1,6 +1,5 @@
 .nav-container {
-	mix-blend-mode: difference;
-	width: fit-content;
+	user-select: none;
 }
 
 .navbar {
@@ -13,31 +12,43 @@
 
 .name-header {
 	text-transform: uppercase;
-	margin-block-start: 0;
-	margin-block-end: 0;
-	margin-inline-start: 0px;
-	margin-inline-end: 0px;
 	font-weight: 700;
+	font-size: 3.5em;
+	color: #435d86;
+	display: block;
 	text-decoration: none;
+	transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	animation: 2s ease-out 0s 1 fadeInFromTop;
 }
 
 .nav-link {
+	--hover-position: 5px;
+	--viewing-position: 10px;
+	color: #435d86;
+	font-size: 2em;
 	display: block;
 	padding: 1rem 1.5rem;
 	text-decoration: none;
 	transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	animation: 2s ease-out 0s 1 fadeInFromLeft;
+}
+
+.nav-link.viewing {
+	animation-name: fadeInFromLeftViewing;
 }
 
 .nav-link:hover {
-	transform: translateX(-5px);
+	transform: translateX(var(--hover-position));
 }
 
 .viewing {
-	transform: translateX(15px);
+	transform: translateX(var(--viewing-position));
 }
 
 .viewing:hover {
-	transform: translateX(10px);
+	transform: translateX(
+		calc(var(--viewing-position) + var(--hover-position))
+	);
 }
 
 .external-link-container {
@@ -52,7 +63,7 @@
 	width: 100px;
 }
 
-@media (width > 1180px) {
+@media (width > 1365px) {
 	.nav-container {
 		padding: 1rem;
 		z-index: 1;
@@ -67,18 +78,11 @@
 		right: 0;
 		z-index: 1;
 	}
-
-	.name-header {
-		color: #fff;
-	}
-
-	.nav-link {
-		color: #fff;
-	}
 }
 
-@media (width <= 1180px) {
+@media (width <= 1365px) {
 	.nav-container {
+		background-color: #a2a0b3;
 		padding: 1rem;
 	}
 
@@ -92,10 +96,5 @@
 
 	.name-header {
 		width: 40vw;
-		color: #000;
-	}
-
-	.nav-link {
-		color: #000;
 	}
 }

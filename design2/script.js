@@ -23,19 +23,26 @@ menuItems.forEach((item, _) => {
 	item.addEventListener("animationend", () => {
 		item.classList.add("fadeIn-animation-complete");
 	});
-	item.addEventListener("click", () => {
+	item.addEventListener("click", (event) => {
+		event.preventDefault();
+
 		const expandableDiv = document.querySelector(
 			"#menu-background-pattern"
 		);
-		expandableDiv.style.setProperty("width", "100dvw");
+		expandableDiv.style.setProperty("width", "100%");
 		expandableDiv.style.setProperty("opacity", "1");
-		// expandableDiv.style.setProperty(
-		// 	"background-color",
-		// 	"rgb(113, 108, 132)"
-		// );
-		// setTimeout(() => {
-		// 	expandableDiv.style.setProperty("background-image", "none");
-		// }, 2000);
+		expandableDiv.style.setProperty(
+			"background-position",
+			"center center"
+		);
+		setTimeout(() => {
+			expandableDiv.classList.add("zoom-background");
+		}, 1500);
+
+		const newUrl = item.getAttribute("href");
+		setTimeout(() => {
+			window.location.href = newUrl;
+		}, 2000);
 	});
 });
 
@@ -75,3 +82,12 @@ function handleUpdateSize() {
 
 handleUpdateSize();
 window.addEventListener("resize", handleUpdateSize);
+
+const viewingPageItem = document.querySelector(".nav-link");
+viewingPageItem.forEach((item, _) => {
+	if (item.classList.contains("viewing")) {
+		item.addEventListener("click", (event) => {
+			event.preventDefault();
+		});
+	}
+});
