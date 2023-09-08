@@ -16,7 +16,7 @@
   text-transform: uppercase;
   font-weight: 700;
   font-size: 5rem;
-  color: #435d86;
+  color: #c2d9ff;
   display: block;
   text-decoration: none;
   transition: opacity 1.5s ease, transform 1.5s ease;
@@ -39,19 +39,19 @@
   background-position: 0% -150%;
 }
 
-#menu[data-active-index="0"] > #menu-background-image {
+#menu[data-active-index="0"] > .background-image {
   background-position: center 20%;
 }
 
-#menu[data-active-index="1"] > #menu-background-image {
+#menu[data-active-index="1"] > .background-image {
   background-position: center 40%;
 }
 
-#menu[data-active-index="2"] > #menu-background-image {
+#menu[data-active-index="2"] > .background-image {
   background-position: center 60%;
 }
 
-#menu[data-active-index="3"] > #menu-background-image {
+#menu[data-active-index="3"] > .background-image {
   background-position: center 80%;
 }
 
@@ -70,26 +70,12 @@
   animation: 1.5s ease 0s 1 fadeInFromLeft;
 }
 
-#menu-background-image {
-  background-image: url("../assets/background/white-flower.jpeg");
-  background-position: center 40%;
-  background-size: auto 110vmax;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transition: opacity 800ms ease, background-size 800ms ease,
-    background-position 800ms ease;
-  width: 100%;
-  z-index: 0;
-}
-
 #menu-items:hover ~ #menu-background-pattern {
   opacity: 0.65;
   background-position-x: center;
 }
 
-#menu-items:hover ~ #menu-background-image {
+#menu-items:hover ~ .background-image {
   background-size: auto 110vmax;
   opacity: 0.8;
 }

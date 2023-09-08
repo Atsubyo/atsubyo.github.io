@@ -1,12 +1,8 @@
-.page-container {
-  background-image: url("../assets/background/white-flower.jpeg");
-  background-attachment: fixed;
-  background-size: cover;
-}
-
 .content-container {
   line-height: 2;
   font-size: 1.5rem;
+  width: 100dvw;
+  height: 100vh;
 }
 
 .section-header {

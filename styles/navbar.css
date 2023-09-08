@@ -18,7 +18,7 @@
   text-transform: uppercase;
   font-weight: 700;
   font-size: 3.5em;
-  color: #435d86;
+  color: #c2d9ff;
   display: block;
   text-decoration: none;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -28,7 +28,7 @@
 .nav-link {
   --hover-position: 5px;
   --viewing-position: 10px;
-  color: #435d86;
+  color: #c2d9ff;
   font-size: 2em;
   display: block;
   padding: 1rem 1.5rem;
