@@ -22,7 +22,6 @@
   display: block;
   text-decoration: none;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  animation: 2s ease-out 0s 1 fadeInFromTop;
 }
 
 .nav-link {
@@ -34,7 +33,6 @@
   padding: 1rem 1.5rem;
   text-decoration: none;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  animation: 2s ease-out 0s 1 fadeInFromLeft;
 }
 
 .nav-link.viewing {
@@ -59,13 +57,24 @@
   display: flex;
   flex-direction: column;
   transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  animation: 1.5s ease 0s 1 fadeInFromRight;
 }
 
 .external-link-icon {
   --external-icon-scale: 1.2;
   transform: scale(var(--external-icon-scale));
   transition: transform 0.3s ease;
+}
+
+.name-header.fade-on-load {
+  animation: 2s ease-out 0s 1 fadeInFromTop;
+}
+
+.nav-link.fade-on-load {
+  animation: 2s ease-out 0s 1 fadeInFromLeft;
+}
+
+.external-link-container.fade-on-load {
+  animation: 1.5s ease 0s 1 fadeInFromRight;
 }
 
 @media (max-width: 1520px) or (max-height: 1120px) {

@@ -32,3 +32,23 @@ document.querySelectorAll(".card").forEach((item, _) => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var referringPage = document.referrer;
+
+  if (referringPage.endsWith("index.html")) {
+    var externalLinks = document.querySelectorAll(".external-link-container");
+    var navbar = document.querySelectorAll(".nav-link");
+    var nameHeader = document.querySelectorAll(".name-header");
+
+    addFadeOnLoad(externalLinks);
+    addFadeOnLoad(navbar);
+    addFadeOnLoad(nameHeader);
+  }
+});
+
+function addFadeOnLoad(elements) {
+  elements.forEach((item, _) => {
+    item.classList.add("fade-on-load");
+  });
+}

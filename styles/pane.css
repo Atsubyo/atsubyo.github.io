@@ -12,9 +12,8 @@
 .pane-container .pane {
   font-size: 1rem;
   position: relative;
-  min-width: 550px;
-  width: 1000px;
-  min-height: 450px;
+  min-width: 600px;
+  min-height: 700px;
   height: 70dvh;
   margin: 30px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.2);

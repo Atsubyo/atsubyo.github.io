@@ -63,7 +63,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  opacity: 0.3;
+  opacity: 0.6;
   transition: opacity 800ms ease, background-position 1.5s ease, width 1.5s ease;
   width: 15dvw;
   z-index: 2;
