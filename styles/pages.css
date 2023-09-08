@@ -1,0 +1,71 @@
+.page-container {
+  background-image: url("../assets/background/purple-watercolor2.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.content-container {
+  line-height: 2;
+  font-size: 1.5rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-block-start: 0;
+  margin-block-end: 0px;
+  padding-block-start: 0.83em;
+  padding-block-end: 0.83em;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: 2s ease-out 0s 1 fadeInFromTop;
+}
+
+.section-paragraph {
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: 2s ease 0s 1 fadeInFromBottom;
+}
+
+#projects {
+  margin-inline: auto;
+}
+
+@media (max-width: 1025px) {
+  .wrapper {
+    margin-inline: max(100px, 15dvw);
+  }
+}
+
+@media (min-width: 1026px) and (max-width: 1365px) {
+  .wrapper {
+    margin-inline: max(260px, 25dvw);
+  }
+}
+
+@media (min-width: 1365px) {
+  .wrapper {
+    margin-inline: max(260px, 25dvw);
+  }
+}
+
+@media (max-width: 1025px) {
+  #projects {
+    width: 60ch;
+  }
+}
+
+@media (min-width: 1026px) and (max-width: 1489px) {
+  #projects {
+    width: 70ch;
+  }
+}
+
+@media (min-width: 1490px) {
+  #projects {
+    width: 100ch;
+  }
+}
+
+@media (min-width: 600px) {
+  .page-container {
+    overflow-x: hidden;
+  }
+}

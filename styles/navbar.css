@@ -1,0 +1,131 @@
+.head-container {
+  width: 100%;
+}
+
+.nav-container {
+  user-select: none;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.translate {
+  transform: translateX(20px);
+}
+
+.name-header {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3.5em;
+  color: #435d86;
+  display: block;
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: 2s ease-out 0s 1 fadeInFromTop;
+}
+
+.nav-link {
+  --hover-position: 5px;
+  --viewing-position: 10px;
+  color: #435d86;
+  font-size: 2em;
+  display: block;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: 2s ease-out 0s 1 fadeInFromLeft;
+}
+
+.nav-link.viewing {
+  animation-name: fadeInFromLeftViewing;
+}
+
+.nav-link:hover {
+  transform: translateX(var(--hover-position));
+}
+
+.viewing {
+  transform: translateX(var(--viewing-position));
+}
+
+.viewing:hover {
+  transform: translateX(calc(var(--viewing-position) + var(--hover-position)));
+}
+
+.external-link-container {
+  padding-inline-start: 0;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: 1.5s ease 0s 1 fadeInFromRight;
+}
+
+.external-link-icon {
+  --external-icon-scale: 1.2;
+  transform: scale(var(--external-icon-scale));
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 1520px) or (max-height: 1120px) {
+  .external-link-icon {
+    --external-icon-scale: 1;
+    transform: scale(var(--external-icon-scale));
+  }
+}
+
+@media (max-width: 1365px) or (max-height: 650px) {
+  .external-link-icon {
+    --external-icon-scale: 0.8;
+    transform: scale(var(--external-icon-scale));
+  }
+}
+
+.external-link-icon:hover {
+  transform: scale(calc(var(--external-icon-scale) * 1.08));
+}
+
+.external-link-icon:active {
+  transform: scale(calc(var(--external-icon-scale) * 0.9));
+}
+
+@media (min-width: 1025px) {
+  .nav-container {
+    padding: 1rem;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: fixed;
+  }
+
+  .external-link-container {
+    padding: 1.5rem 1rem 1rem 1rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1025px) {
+  .nav-container {
+    padding: 1rem;
+    width: fit-content;
+  }
+
+  .external-link-container {
+    padding: 1.5rem 1rem 1rem 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .name-header {
+    width: 40vw;
+  }
+}
