@@ -5,6 +5,7 @@
 @import url("pane.css");
 @import url("navbar.css");
 @import url("animations.css");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 
 html {
   min-width: 474px;
@@ -12,17 +13,17 @@ html {
 
 :root {
   font-family: monospace;
-  --text-color-light: #435d86;
-  --background-color-light: rgb(113, 108, 132);
-
-  --text-color-dark: #c2d9ff;
-  --background-color-dark: rgb(113, 108, 132);
+  --text-color-dark: #435d86;
+  --text-color-light: #c2d9ff;
+  --background-color-dark: rgb(41, 44, 65);
+  --glass-background: rgba(180, 189, 201, 0.2);
+  --glass-foreground: #3a5138;
 }
 
 body {
-  color: var(--text-color-dark);
+  color: var(--text-color-light);
   margin: 0;
-  background-color: rgb(41, 44, 65);
+  background-color: var(--background-color-dark);
   background-image: url("../assets/background/sf-evening-sky.jpeg");
   background-position: center 40%;
   background-size: cover;
