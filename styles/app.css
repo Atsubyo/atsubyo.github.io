@@ -17,7 +17,7 @@ html {
   --text-color-light: #c2d9ff;
   --background-color-dark: rgb(41, 44, 65);
   --glass-background: rgba(180, 189, 201, 0.1);
-  --glass-foreground: #3a5138;
+  --body-text-color: #ffffff;
 }
 
 body {
