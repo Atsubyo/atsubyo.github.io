@@ -50,7 +50,8 @@
 }
 
 .link-icon {
-  --icon-scale: 1;
+  --icon-scale: 0.8;
+  transform: scale(var(--icon-scale));
 }
 
 #gmail-link {
@@ -79,14 +80,14 @@
 
 @media (max-width: 1520px) or (max-height: 1120px) {
   .link-icon {
-    --icon-scale: 0.8;
+    --icon-scale: 0.6;
     transform: scale(var(--icon-scale));
   }
 }
 
 @media (max-width: 1200px) or (max-height: 850px) {
   .link-icon {
-    --icon-scale: 0.6;
+    --icon-scale: 0.4;
     transform: scale(var(--icon-scale));
   }
 }
