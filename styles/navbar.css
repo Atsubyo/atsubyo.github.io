@@ -60,6 +60,8 @@
 }
 
 .external-link-icon {
+  width: 80px;
+  height: 80px;
   --external-icon-scale: 0.8;
   transform: scale(var(--external-icon-scale));
   transition: transform 0.3s ease;
@@ -79,14 +81,14 @@
 
 @media (max-width: 1520px) or (max-height: 1120px) {
   .external-link-icon {
-    --external-icon-scale: 1;
+    --external-icon-scale: 0.85;
     transform: scale(var(--external-icon-scale));
   }
 }
 
-@media (max-width: 1365px) or (max-height: 650px) {
+@media (max-width: 1025px) or (max-height: 650px) {
   .external-link-icon {
-    --external-icon-scale: 0.8;
+    --external-icon-scale: 0.75;
     transform: scale(var(--external-icon-scale));
   }
 }
